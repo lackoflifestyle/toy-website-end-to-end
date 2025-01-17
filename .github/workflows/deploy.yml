@@ -99,7 +99,7 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
     - uses: azure/webapps-deploy@v2
-      name: Deploy website
+      name: Deploy website on Azure App Service
       with:
         app-name: ${{ needs.deploy.outputs.appServiceAppName }}
         package: website/publish.zip
